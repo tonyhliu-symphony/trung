@@ -6,7 +6,7 @@ class TodoForm extends React.Component {
     this.state = {
       title: "",
       body: "",
-      done: false
+      completed: false
     };
 
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -18,14 +18,16 @@ class TodoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
+    // Used to generate random id 
     const todo = Object.assign({}, this.state, { id: Math.random(10) * 10})
     this.props.receiveTodo(todo);
 
     // reset state 
     this.state = {
       title: "",
-      body: ""
-    }
+      body: "",
+      completed: false
+    };
   }
 
   render() {
