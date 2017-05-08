@@ -28,7 +28,7 @@ class TodoList extends React.Component {
 
     return (
       <div>
-        <h3>Incomplete Todos</h3>
+        <h3>Things To do</h3>
         <ul>
             { unfinishedItem }
         </ul>
